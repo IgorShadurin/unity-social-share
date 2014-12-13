@@ -6,10 +6,11 @@ public class SocialShare : MonoBehaviour
     public string Title;
     public string Description;
     public string Image;
+    public string URL;
 
     private string vkTemplate = "http://vk.com/share.php?title={0}&description={1}&image={2}&url={3}";
     private string facebookTemplate = "https://www.facebook.com/sharer/sharer.php?u={3}";
-    private string odnoklassnikiTemplate = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.surl={3}&st.comments={1}";
+    private string odnoklassnikiTemplate = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl={3}&st.comments={1}";
     private string twitterTemplate = "https://twitter.com/intent/tweet?text={0}&url={3}";
 
     private enum Social
@@ -28,10 +29,6 @@ public class SocialShare : MonoBehaviour
     string makeUrl(Social social)
     {
         string template = string.Empty;
-
-        string title = string.Empty;
-        string description = string.Empty;
-        string image = string.Empty;
         switch (social)
         {
             case Social.VK:
@@ -50,7 +47,7 @@ public class SocialShare : MonoBehaviour
                 break;
         }
 
-        return string.Format(template, EscapeURL(title), EscapeURL(description), EscapeURL(image));
+        return string.Format(template, EscapeURL(Title), EscapeURL(Description), EscapeURL(Image), EscapeURL(URL));
     }
 
     public void VK()
