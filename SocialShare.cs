@@ -9,7 +9,7 @@ public class SocialShare : MonoBehaviour
 
     private string vkTemplate = "http://vk.com/share.php?title={0}&description={1}&image={2}&url={3}";
     private string facebookTemplate = "https://www.facebook.com/sharer/sharer.php?u={3}";
-    private string odnoklassnikiTemplate = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl={3}&st.comments={1}";
+    private string odnoklassnikiTemplate = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.surl={3}&st.comments={1}";
     private string twitterTemplate = "https://twitter.com/intent/tweet?text={0}&url={3}";
 
     private enum Social
