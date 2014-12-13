@@ -26,10 +26,15 @@ public class SocialShare : MonoBehaviour
 
     public void Facebook()
     {
-        whahah
+        
     }
 
     public void Twitter()
+    {
+
+    }
+
+    public void Odnoklassniki()
     {
 
     }
